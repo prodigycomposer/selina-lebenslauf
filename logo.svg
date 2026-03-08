@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400&amp;family=Poppins:wght@300&amp;display=swap');
+  </style>
+  <text x="90" y="38" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="42" font-weight="300" fill="#2d2d2d" letter-spacing="6" font-style="italic">SL</text>
+  <line x1="30" y1="46" x2="150" y2="46" stroke="#006d77" stroke-width="0.8"/>
+  <text x="90" y="56" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="6.5" font-weight="300" fill="#8a8a8a" letter-spacing="5.5">SELINA LIERZER</text>
+</svg>
