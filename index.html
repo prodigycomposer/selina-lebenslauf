@@ -203,6 +203,7 @@
     .mobile-menu.open a:nth-child(4) { transition-delay: 0.25s; }
     .mobile-menu.open a:nth-child(5) { transition-delay: 0.3s; }
     .mobile-menu.open a:nth-child(6) { transition-delay: 0.35s; }
+    .mobile-menu.open a:nth-child(7) { transition-delay: 0.4s; }
 
     .mobile-menu a:hover { color: var(--accent-light); }
 
@@ -787,6 +788,119 @@
 
     .lightbox-close:hover { opacity: 0.6; }
 
+    /* ── Tristan Section ── */
+    .tristan { background: var(--white); overflow: hidden; }
+
+    .tristan-intro {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 50px auto;
+    }
+
+    .tristan-intro p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .tristan-intro .cat-name {
+      font-family: 'Dancing Script', cursive;
+      font-size: 36px;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .tristan-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .tristan-grid .tristan-photo {
+      overflow: hidden;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .tristan-grid .tristan-photo img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .tristan-grid .tristan-photo:hover img {
+      transform: scale(1.05);
+    }
+
+    .tristan-grid .tristan-photo.featured {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .tristan-grid .tristan-photo.featured img {
+      height: 100%;
+    }
+
+    .tristan-traits {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .tristan-trait {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .tristan-trait .trait-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .tristan-trait h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .tristan-trait p {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .tristan-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .tristan-grid .tristan-photo.featured {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+      .tristan-grid .tristan-photo.featured img {
+        height: 300px;
+      }
+      .tristan-traits { gap: 20px; }
+    }
+
+    @media (max-width: 480px) {
+      .tristan-grid {
+        grid-template-columns: 1fr;
+      }
+      .tristan-grid .tristan-photo.featured {
+        grid-column: span 1;
+      }
+    }
+
     /* ── Languages ── */
     .languages { background: var(--dark); color: var(--white); }
 
@@ -1046,6 +1160,7 @@
       <li><a href="#experience">Erfahrung</a></li>
       <li><a href="#education">Ausbildung</a></li>
       <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#tristan">Tristan</a></li>
       <li><a href="#contact">Kontakt</a></li>
     </ul>
     <!-- 7. Hamburger -->
@@ -1063,6 +1178,7 @@
     <a href="#experience">Erfahrung</a>
     <a href="#education">Ausbildung</a>
     <a href="#gallery">Gallery</a>
+    <a href="#tristan">Tristan</a>
     <a href="#contact">Kontakt</a>
   </div>
 
@@ -1273,6 +1389,62 @@
     <span class="lightbox-close">&times;</span>
     <img src="" alt="Lightbox" id="lightboxImg">
   </div>
+
+  <!-- ── Tristan ── -->
+  <section class="tristan" id="tristan">
+    <div class="container">
+      <div class="tristan-intro reveal">
+        <div class="section-label">Mein Seelentier</div>
+        <h2 class="section-heading">Tristan</h2>
+        <span class="cat-name">der bezauberndste Furzipups der Welt</span>
+        <p>
+          Tristan ist ein wunderschöner Ragdoll-Kater mit den sanftesten blauen Augen und dem flauschigsten Fell, das man sich vorstellen kann. Er ist ein bisschen schüchtern, aber wenn er einmal Vertrauen gefasst hat, ist er der verschmusteste und treueste Begleiter. Sein Lieblingsplatz? Ganz nah bei Selina, am liebsten eingekuschelt in weiche Decken.
+        </p>
+      </div>
+      <div class="tristan-grid">
+        <div class="tristan-photo featured reveal" onclick="openLightbox(this)">
+          <img src="img/tristan-4.jpg" alt="Tristan kuschelt mit Selina">
+        </div>
+        <div class="tristan-photo reveal" onclick="openLightbox(this)">
+          <img src="img/tristan-2.jpg" alt="Tristan mit blauen Augen">
+        </div>
+        <div class="tristan-photo reveal" onclick="openLightbox(this)">
+          <img src="img/tristan-5.jpg" alt="Tristan schläft eingekuschelt">
+        </div>
+        <div class="tristan-photo reveal" onclick="openLightbox(this)">
+          <img src="img/tristan-3.jpg" alt="Tristan schaut neugierig">
+        </div>
+        <div class="tristan-photo reveal" onclick="openLightbox(this)">
+          <img src="img/tristan-6.jpg" alt="Tristan sitzt am Boden">
+        </div>
+        <div class="tristan-photo reveal" onclick="openLightbox(this)">
+          <img src="img/tristan-1.jpg" alt="Tristan und Selina kuscheln">
+        </div>
+      </div>
+      <div class="tristan-traits reveal">
+        <div class="tristan-trait">
+          <div class="trait-icon">&#128566;</div>
+          <h4>Schüchtern</h4>
+          <p>Braucht sein Tempo</p>
+        </div>
+        <div class="tristan-trait">
+          <div class="trait-icon">&#128149;</div>
+          <h4>Verschmust</h4>
+          <p>Kuscheln ist sein Lebensinhalt</p>
+        </div>
+        <div class="tristan-trait">
+          <div class="trait-icon">&#129681;</div>
+          <h4>Flauschig</h4>
+          <p>Das weichste Fell Wiens</p>
+        </div>
+        <div class="tristan-trait">
+          <div class="trait-icon">&#128164;</div>
+          <h4>Gemütlich</h4>
+          <p>Profi-Schläfer seit Tag 1</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ── Languages ── -->
   <section class="languages">
